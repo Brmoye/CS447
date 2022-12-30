@@ -1,0 +1,14 @@
+START TRANSACTION;
+INSERT INTO Cars VALUES ('Cybertruck', 'Tesla');
+INSERT INTO Prices VALUES ('Cybertruck', 2025, 125000);
+COMMIT;
+
+START TRANSACTION;
+DELETE FROM Prices WHERE model='Cybertruck';
+DELETE FROM Cars WHERE model='Cybertruck';
+COMMIT;
+
+START TRANSACTION;
+INSERT INTO Cars VALUES ('Tesla', 'Cybertruck');
+INSERT INTO Prices VALUES ('Cybertruck', 2025, 125000);
+ROLLBACK;

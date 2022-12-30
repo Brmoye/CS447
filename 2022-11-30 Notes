@@ -1,0 +1,41 @@
+Database Security
+	Claim of identity
+		Ex:
+			username
+			password
+		
+			Linux, PAM plugin
+			
+	GRANT statement - allows you to grant privileges to accounts
+	REVOKE statement - revokes privilieges
+	
+	Can give some subset of privileges for a table or a database to an account
+	
+	To create an account:
+		CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
+		
+		CREATE USER 'bob'@'localhost'  ...
+	
+	IMPLICIT account creation:
+	
+		GRANT USAGE ON db.table
+		GRANT USAGE ON *.*
+		GRANT USAGE ON db.*
+	
+		GRANT USAGE ON ev.* TO 'user'@'hostname' IDENTIFIED BY 'password';
+	
+	
+	
+	DROP USER 'user'@'hostname';
+	
+	
+	
+	
+	
+	
+	Tangent - prepared statements, look them up to find out how to prevent sql injection
+	Also secure the database
+	
+	
+	
+	
